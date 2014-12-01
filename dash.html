@@ -43,6 +43,15 @@
     width: 640px;
     margin: 0 auto;
   }
+  .like-reblog {
+    list-style: none;
+    border: 1px solid #ccc;
+  }
+  .like-reblog li {
+    float: right;
+    padding: 6px;
+    height: 20px;
+  }
 </style>
 </head>
 
@@ -67,6 +76,11 @@
 				</h3>
 			{/block:Title}
 			{Body}
+			<ul class="like-reblog">
+			  <li>{LikeButton}</li>
+			  <li>{ReblogButton}</li>
+			  <li>{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</li>
+			</ul>
 		</div>
 		{/block:Text}
 
@@ -74,6 +88,11 @@
 		<div class="post">	
 			<img src="{PhotoURL-500}">
 			{block:Caption}{Caption}{/block:Caption}
+			<ul class="like-reblog">
+		  	<li>{LikeButton}</li>
+		  	<li>{ReblogButton}</li>
+		  	<li>{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</li>
+			</ul>
 		</div>
 		{/block:Photo}
 
@@ -81,6 +100,11 @@
 		<div class="post">
 			{Quote}
 	   	{block:Source}<br>&mdash;{Source}{/block:Source}
+	   	<ul class="like-reblog">
+		  	<li>{LikeButton}</li>
+		  	<li>{ReblogButton}</li>
+		  	<li>{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</li>
+			</ul>
 		</div>
 		{/block:Quote}
 
@@ -88,6 +112,11 @@
 		<div class="post">
   			<a href="{URL}" {Target}>{Name}</a>
   			{block:Description}{Description}{/block:Description}
+  			<ul class="like-reblog">
+		  	  <li>{LikeButton}</li>
+		  	  <li>{ReblogButton}</li>
+		  	  <li>{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</li>
+			  </ul>
   		</div>
 		{/block:Link}
 
@@ -102,13 +131,23 @@
 				</tr>
 				{/block:Lines}
 			</table>
+			<ul class="like-reblog">
+		  	<li>{LikeButton}</li>
+		  	<li>{ReblogButton}</li>
+		  	<li>{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</li>
+			</ul>
 		</div>
 		{/block:Chat}
 	
 		{block:Audio}
 		<div class="post">
 			{AudioPlayer}
-      	{block:Caption}{Caption}{/block:Caption}
+      {block:Caption}{Caption}{/block:Caption}
+      <ul class="like-reblog">
+		  	<li>{LikeButton}</li>
+		  	<li>{ReblogButton}</li>
+		  	<li>{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</li>
+			</ul>
 		</div>
 		{/block:Audio}
 
@@ -116,6 +155,11 @@
 		<div class="post">
 			{Video-500}
 			{block:Caption}{Caption}{/block:Caption}
+			<ul class="like-reblog">
+		  	<li>{LikeButton}</li>
+		  	<li>{ReblogButton}</li>
+		  	<li>{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</li>
+			</ul>
 		</div>
 		{/block:Video}
 
